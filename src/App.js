@@ -2,10 +2,10 @@ import Container from './components/Container/Container.jsx';
 import { useEffect, lazy, Suspense } from 'react';
 import { ToastContainer } from 'react-toastify';
 import { Navigate, Route, Routes } from 'react-router-dom';
-// import HomeView from './views/HomeView.js';
-// import RegisterView from './views/RegisterView.js';
-// import ContactsView from './views/ContactsView.js';
-// import LoginView from './views/LoginView.js';
+import HomeView from './views/HomeView.js';
+import RegisterView from './views/RegisterView.js';
+import ContactsView from './views/ContactsView.js';
+import LoginView from './views/LoginView.js';
 import Appbar from './components/Appbar/Appbar.jsx';
 import { useDispatch } from 'react-redux';
 import { authOperations, authSelectors } from './redux/auth';
@@ -14,10 +14,10 @@ import PublicRoute from './components/PublicRoute.jsx';
 import { useSelector } from 'react-redux';
 import { Sceleton } from './components/Sceleton.js';
 
-const HomeView = lazy(() => import('./views/HomeView'));
-const RegisterView = lazy(() => import('./views/RegisterView'));
-const ContactsView = lazy(() => import('./views/ContactsView'));
-const LoginView = lazy(() => import('./views/LoginView'));
+// const HomeView = lazy(() => import('./views/HomeView'));
+// const RegisterView = lazy(() => import('./views/RegisterView'));
+// const ContactsView = lazy(() => import('./views/ContactsView'));
+// const LoginView = lazy(() => import('./views/LoginView'));
 
 const App = () => {
   const dispatch = useDispatch();
@@ -35,14 +35,14 @@ const App = () => {
       {!isFetching && (
         <Suspense fallback={<Sceleton />}>
           <Routes>
-            <Route
-              path="/"
-              element={
-                <PublicRoute>
-                  <HomeView />
-                </PublicRoute>
-              }
-            />
+            {/* <Route
+            path="/"
+            element={
+              <PublicRoute>
+                <HomeView />
+              </PublicRoute>
+            }
+          /> */}
             <Route
               path="/register"
               restricted
@@ -72,7 +72,7 @@ const App = () => {
               }
             />
 
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="*" element={<Navigate to="/register" />} />
           </Routes>
         </Suspense>
       )}
