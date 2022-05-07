@@ -1,0 +1,9 @@
+.container {
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 800px;
+  line-height: 1.5;
+  margin: 0 auto;
+  margin-top: 50px;
+}

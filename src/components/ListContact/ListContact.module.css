@@ -1,0 +1,45 @@
+.list {
+  margin-top: 30px;
+  font-weight: bold;
+  color: #3f51b5;
+  height: 400px;
+  width: 250px;
+  overflow: auto;
+}
+.item {
+  line-height: 1.5;
+}
+.span {
+  color: #000;
+}
+.loader {
+  position: absolute;
+  display: inline-block;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.title {
+  display: inline-block;
+}
+
+.btn {
+  display: block;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 15px;
+  padding: 3px 9px;
+  border-radius: 5px;
+  border: solid 2px #3f51b5;
+  transition: 250ms;
+  background-color: #fff;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #fff;
+  background-color: #3f51b5;
+  border-color: #fff;
+}
