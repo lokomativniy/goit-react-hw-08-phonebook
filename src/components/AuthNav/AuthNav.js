@@ -4,9 +4,9 @@ const setActiveLink = ({ isActive }) => (isActive ? s.activeLink : s.link);
 
 const AuthNav = () => (
   <nav className={s.list}>
-    {/* <NavLink to="/" className={setActiveLink}>
+    <NavLink to="/" className={setActiveLink}>
       Home
-    </NavLink> */}
+    </NavLink>
     <NavLink to="/register" className={setActiveLink}>
       Sign up
     </NavLink>
