@@ -3,7 +3,7 @@ import { Oval } from 'react-loader-spinner';
 const Loader = () => (
   <>
     <Oval
-      color="#3f51b5"
+      color="#008080"
       height={40}
       width={40}
       position="absolute"

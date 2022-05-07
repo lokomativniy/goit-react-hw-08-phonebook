@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { setupListeners } from '@reduxjs/toolkit/dist/query';
 import { filterReducer } from './contacts/contacts-reducer';
 import { contactsApi } from './contacts/contacts-slice';
 
@@ -37,5 +38,7 @@ export const store = configureStore({
   ],
   devTools: process.env.NODE_ENV === 'development',
 });
+
+setupListeners(store.dispatch);
 
 export const persistor = persistStore(store);

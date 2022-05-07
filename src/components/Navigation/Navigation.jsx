@@ -11,9 +11,6 @@ const Navigation = () => {
   return (
     <>
       <nav className={s.nav}>
-        <NavLink to="/" className={setActiveLink}>
-          Main
-        </NavLink>
         {isLoggedIn && (
           <NavLink to="/contacts" className={setActiveLink}>
             Contacts

@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 
 const Filter = () => {
   const filter = useSelector(getFilter);
+  console.log(filter);
   const dispatch = useDispatch();
   const onChange = e => dispatch(changeFilter(e.target.value));
 
@@ -20,7 +21,6 @@ const Filter = () => {
         name="filter"
         type="text"
         autoComplete="off"
-        placeholder="Please enter name"
       />
     </label>
   );

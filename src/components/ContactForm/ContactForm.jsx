@@ -10,17 +10,17 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 
+const useStyles = makeStyles(theme => ({
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+}));
+
 const ContactForm = () => {
   const [addContact, { isLoading }] = useAddContactMutation();
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const items = useSelector(getItems);
-
-  const useStyles = makeStyles(theme => ({
-    submit: {
-      margin: theme.spacing(3, 0, 2),
-    },
-  }));
   const classes = useStyles();
 
   const handleInputChange = e => {

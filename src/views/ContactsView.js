@@ -8,7 +8,7 @@ const ContactsView = () => {
     <div
       style={{
         display: 'flex',
-        justifyContent: 'space-around',
+        justifyContent: 'space-evenly',
         marginTop: '15px',
       }}
     >

@@ -17,12 +17,6 @@ const ListContact = () => {
   const { data: contacts, error, isFetching } = useFetchContactsQuery();
   const normalizedFilter = filtered.toLowerCase();
 
-  useEffect(() => {
-    return () => {
-      store.dispatch(contactsApi.util.resetApiState());
-    };
-  }, []);
-
   const filteredContacts = () => {
     if (contacts) {
       return contacts.filter(({ name }) =>
@@ -30,6 +24,12 @@ const ListContact = () => {
       );
     }
   };
+  useEffect(() => {
+    return () => {
+      store.dispatch(contactsApi.util.resetApiState());
+    };
+  }, []);
+
   return (
     <div>
       <h2 className={s.title}>Contacts</h2>

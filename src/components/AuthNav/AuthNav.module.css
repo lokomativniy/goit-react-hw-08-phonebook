@@ -1,9 +1,6 @@
 .list {
-  display: flex;
-  justify-content: space-around;
   margin: 0 auto;
   border-bottom: 1px solid #3333;
-  min-width: 396px;
 }
 
 .link {
